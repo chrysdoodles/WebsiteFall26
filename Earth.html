@@ -1,7 +1,128 @@
+
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-			<tilte> Earth </title>
 
-	<head>
+<style>
+
+	.EarthHeader {
+		color: white;
+		background-color: #0E4C92;
+		padding: 30px;
+		width: 300px;
+		border-radius: 20px;
+	}
+
+	.Earthparagraph {
+		color: white;
+		background-color: #0E4C92;
+		padding: 30px;
+		width: 600px;
+		border-radius: 20px;
+	}
+
+	.EarthBackground {
+		background-image: url('Images/Earthbackground.jpeg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		width: 100%;
+		height: 800px;
+		margin: 0;
+		padding: 20px;
+		box-sizing: border-box;
+	}
+
+	.Earthbutton {
+		background-color: #0E4C92;
+		color: white;
+		font-size: 15px;
+		padding: 12px;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+
+</style>
+
+<head>
+	<meta charset="utf-8">
+</head>
+
+<body class="EarthBackground">
+
+	<h1 class="EarthHeader">Welcome to Earth</h1>
+
+	<p class="Earthparagraph">
+
+		BASIC FUN FACTS
+
+		Earth is the third planet from the Sun.
+		It is about 4.5 billion years old.
+		Earth is the only known planet with life.
+		About 71% of Earth's surface is covered by water.
+		Earth has one natural satellite, the Moon.
+		A day on Earth lasts about 24 hours.
+		A year on Earth lasts about 365 days.
+		Earth has a protective atmosphere.
+		Earth is the only planet known to have liquid water on its surface.
+
+	</p>
+
+
+
+	<p id="joke" class="EarthHeader">
+		Click the button to get a joke!
+	</p>
+
+	<button class="Earthbutton" onclick="randomJoke()">
+		Tell me a joke
+	</button>
+
+
+	<script>
+
+		function calculateWeight() {
+
+			let earthWeight = document.getElementById("earthWeight").value;
+
+			let earthWeightResult = earthWeight * 1;
+
+			document.getElementById("weightResult").textContent =
+				"You would weigh " + earthWeightResult.toFixed(1) + " lbs on Earth!";
+		}
+
+
+		let jokes = [
+
+			"Why did Earth break up with Mars? It needed some space! ",
+
+			"Why is Earth so good at keeping secrets? It has a lot of layers! ",
+
+			"What did Earth say to the Moon? Stop following me around! ",
+
+			"Why did Earth go to school? To get a little more grounded! ",
+
+			"Why is Earth so popular? Because it has a great atmosphere! ",
+
+			"What is Earth's favorite type of music? Rock! ",
+
+			"Why did Earth get promoted? It was outstanding in its field! ",
+
+			"Why doesn't Earth ever get bored? It always has something going on! "
+
+		];
+
+
+		function randomJoke() {
+
+			let randomNumber = Math.floor(Math.random() * jokes.length);
+
+			document.getElementById("joke").textContent = jokes[randomNumber];
+
+		}
+
+	</script>
+
+</body>
+</html>
+

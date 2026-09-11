@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+
+<style>
+
+	.UranusHeader {
+		color: white;
+		background-color: #5DADE2;
+		padding: 30px;
+		width: 300px;
+		border-radius: 20px;
+	}
+
+	.Uranusparagraph {
+		color: white;
+		background-color: #5DADE2;
+		padding: 30px;
+		width: 600px;
+		border-radius: 20px;
+	}
+
+	.UranusBackground {
+		background-image: url('Images/Uranusbackground.jpeg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		width: 100%;
+		height: 800px;
+		margin: 0;
+		padding: 20px;
+		box-sizing: border-box;
+	}
+
+	.Uranusbutton {
+		background-color: #5DADE2;
+		color: white;
+		font-size: 15px;
+		padding: 12px;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+
+</style>
+
+<head>
+	<meta charset="utf-8">
+</head>
+
+<body class="UranusBackground">
+
+	<h1 class="UranusHeader">Welcome to Uranus</h1>
+
+	<p class="Uranusparagraph">
+
+		BASIC FUN FACTS
+
+		Uranus is the seventh planet from the Sun.
+		It is the third-largest planet in our Solar System.
+		Uranus is about 4.5 billion years old.
+		Uranus is an ice giant.
+		A year on Uranus lasts about 84 Earth years.
+		A day on Uranus lasts about 17 hours.
+		Uranus rotates on its side.
+		Uranus has a blue-green color because of methane in its atmosphere.
+		Uranus has rings.
+		Uranus has many moons, including Titania and Oberon.
+
+	</p>
+
+
+	<h2 class="UranusHeader">What would you weigh on Uranus?</h2>
+
+	<p class="Uranusparagraph">
+		Enter your Earth weight below to find out!
+	</p>
+
+	<input type="number" id="earthWeight" placeholder="Enter your weight">
+
+	<button class="Uranusbutton" onclick="calculateWeight()">
+		Calculate
+	</button>
+
+	<p id="weightResult" class="UranusHeader">
+		Your Uranus weight will appear here!
+	</p>
+
+
+	<p id="joke" class="UranusHeader">
+		Click the button to get a joke!
+	</p>
+
+	<button class="Uranusbutton" onclick="randomJoke()">
+		Tell me a joke
+	</button>
+
+
+	<script>
+
+		function calculateWeight() {
+
+			let earthWeight = document.getElementById("earthWeight").value;
+
+			let uranusWeight = earthWeight * 0.89;
+
+			document.getElementById("weightResult").textContent =
+				"You would weigh about " + uranusWeight.toFixed(1) + " lbs on Uranus!";
+		}
+
+
+		let jokes = [
+
+			"Why is Uranus always so cold? It is really far from the Sun! ",
+
+			"Why did Uranus get a telescope? It wanted to see its rings! ",
+
+			"Why does Uranus rotate sideways? It likes doing things differently! ",
+
+			"What is Uranus's favorite color? Blue-green! ",
+
+			"Why did Uranus go to school? To become a smarter planet! ",
+
+			"Why is Uranus such a unique planet? Because it likes to stand out! ",
+
+			"Why did Uranus bring a jacket? Because it is freezing out there! ",
+
+			"What did Uranus say to Saturn? Nice rings! "
+
+		];
+
+
+		function randomJoke() {
+
+			let randomNumber = Math.floor(Math.random() * jokes.length);
+
+			document.getElementById("joke").textContent = jokes[randomNumber];
+
+		}
+
+	</script>
+
+</body>
+</html>

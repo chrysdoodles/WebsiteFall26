@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+
+<style>
+
+	.SaturnHeader {
+		color: white;
+		background-color: #B8A47E;
+		padding: 30px;
+		width: 300px;
+		border-radius: 20px;
+	}
+
+	.Saturnparagraph {
+		color: white;
+		background-color: #B8A47E;
+		padding: 30px;
+		width: 600px;
+		border-radius: 20px;
+	}
+
+	.SaturnBackground {
+		background-image: url('Images/Saturnbackground.jpeg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		width: 100%;
+		height: 800px;
+		margin: 0;
+		padding: 20px;
+		box-sizing: border-box;
+	}
+
+	.Saturnbutton {
+		background-color: #B8A47E;
+		color: white;
+		font-size: 15px;
+		padding: 12px;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+
+</style>
+
+<head>
+	<meta charset="utf-8">
+</head>
+
+<body class="SaturnBackground">
+
+	<h1 class="SaturnHeader">Welcome to Saturn</h1>
+
+	<p class="Saturnparagraph">
+
+		BASIC FUN FACTS
+
+		Saturn is the sixth planet from the Sun.
+		It is the second-largest planet in our Solar System.
+		Saturn is about 4.5 billion years old.
+		Saturn is a gas giant.
+		A year on Saturn lasts about 29 Earth years.
+		A day on Saturn lasts about 10.7 hours.
+		Saturn is famous for its beautiful rings.
+		Saturn's rings are made mostly of ice and rock.
+		Saturn has many moons, including Titan.
+		Saturn is less dense than water.
+
+	</p>
+
+
+	<h2 class="SaturnHeader">What would you weigh on Saturn?</h2>
+
+	<p class="Saturnparagraph">
+		Enter your Earth weight below to find out!
+	</p>
+
+	<input type="number" id="earthWeight" placeholder="Enter your weight">
+
+	<button class="Saturnbutton" onclick="calculateWeight()">
+		Calculate
+	</button>
+
+	<p id="weightResult" class="SaturnHeader">
+		Your Saturn weight will appear here!
+	</p>
+
+
+	<p id="joke" class="SaturnHeader">
+		Click the button to get a joke!
+	</p>
+
+	<button class="Saturnbutton" onclick="randomJoke()">
+		Tell me a joke
+	</button>
+
+
+	<script>
+
+		function calculateWeight() {
+
+			let earthWeight = document.getElementById("earthWeight").value;
+
+			let saturnWeight = earthWeight * 1.06;
+
+			document.getElementById("weightResult").textContent =
+				"You would weigh about " + saturnWeight.toFixed(1) + " lbs on Saturn!";
+		}
+
+
+		let jokes = [
+
+			"Why does Saturn have rings? Because it wanted some jewelry! ",
+
+			"Why did Saturn get dressed up? It wanted to look out of this world! ",
+
+			"What is Saturn's favorite type of jewelry? Rings! ",
+
+			"Why did Saturn go to the gym? It wanted to stay in shape! ",
+
+			"Why is Saturn so popular? Because it has the best rings in the Solar System! ",
+
+			"Why did Saturn bring a camera? To take pictures of its rings! ",
+
+			"What did Saturn say to Jupiter? Stop being so big! ",
+
+			"Why doesn't Saturn lose its rings? Because it knows how to keep things together! "
+
+		];
+
+
+		function randomJoke() {
+
+			let randomNumber = Math.floor(Math.random() * jokes.length);
+
+			document.getElementById("joke").textContent = jokes[randomNumber];
+
+		}
+
+	</script>
+
+</body>
+</html>

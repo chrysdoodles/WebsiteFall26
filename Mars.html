@@ -1,0 +1,145 @@
+
+<!doctype html>
+<html>
+
+<style>
+
+	.MarsHeader {
+		color: white;
+		background-color: #A33B20;
+		padding: 30px;
+		width: 300px;
+		border-radius: 20px;
+	}
+
+	.Marsparagraph {
+		color: white;
+		background-color: #A33B20;
+		padding: 30px;
+		width: 600px;
+		border-radius: 20px;
+	}
+
+	.MarsBackground {
+		background-image: url('Images/Marsbackground.jpg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		width: 100%;
+		height: 800px;
+		margin: 0;
+		padding: 20px;
+		box-sizing: border-box;
+	}
+
+	.Marsbutton {
+		background-color: #A33B20;
+		color: white;
+		font-size: 15px;
+		padding: 12px;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+
+</style>
+
+<head>
+	<meta charset="utf-8">
+</head>
+
+<body class="MarsBackground">
+
+	<h1 class="MarsHeader">Welcome to Mars</h1>
+
+	<p class="Marsparagraph">
+
+		BASIC FUN FACTS
+
+		Mars is the fourth planet from the Sun.
+		It is about 4.5 billion years old.
+		Mars is often called the Red Planet.
+		Mars gets its red color from iron minerals in its soil.
+		A year on Mars lasts about 687 Earth days.
+		A day on Mars lasts about 24 hours and 37 minutes.
+		Mars has two moons, Phobos and Deimos.
+		Mars has the largest volcano in the Solar System, Olympus Mons.
+		Mars also has a huge canyon called Valles Marineris.
+		Mars has a very thin atmosphere.
+
+	</p>
+
+
+	<h2 class="MarsHeader">What would you weigh on Mars?</h2>
+
+	<p class="Marsparagraph">
+		Enter your Earth weight below to find out!
+	</p>
+
+	<input type="number" id="earthWeight" placeholder="Enter your weight">
+
+	<button class="Marsbutton" onclick="calculateWeight()">
+		Calculate
+	</button>
+
+	<p id="weightResult" class="MarsHeader">
+		Your Mars weight will appear here!
+	</p>
+
+
+	<p id="joke" class="MarsHeader">
+		Click the button to get a joke!
+	</p>
+
+	<button class="Marsbutton" onclick="randomJoke()">
+		Tell me a joke
+	</button>
+
+
+	<script>
+
+		function calculateWeight() {
+
+			let earthWeight = document.getElementById("earthWeight").value;
+
+			let marsWeight = earthWeight * 0.38;
+
+			document.getElementById("weightResult").textContent =
+				"You would weigh about " + marsWeight.toFixed(1) + " lbs on Mars!";
+		}
+
+
+		let jokes = [
+
+			"Why did Mars break up with Earth? It needed some space! ",
+
+			"Why is Mars red? It has a bad case of iron deficiency! ",
+
+			"What did Mars say to Earth? Stop being so down to Earth! ",
+
+			"Why did Mars bring a blanket? It was feeling a little chilly! ",
+
+			"Why did Mars go to the gym? It wanted to work on its atmosphere! ",
+
+			"What is Mars's favorite type of music? Rock! ",
+
+			"Why did Mars get lost? It couldn't find its rover! ",
+
+			"Why is Mars such a good neighbor? It's just a planet away! "
+
+		];
+
+
+		function randomJoke() {
+
+			let randomNumber = Math.floor(Math.random() * jokes.length);
+
+			document.getElementById("joke").textContent = jokes[randomNumber];
+
+		}
+
+	</script>
+
+</body>
+</html>
+

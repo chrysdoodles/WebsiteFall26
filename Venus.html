@@ -1,0 +1,145 @@
+
+<!doctype html>
+<html>
+
+<style>
+
+	.VenusHeader {
+		color: white;
+		background-color: #b8860b;
+		padding: 30px;
+		width: 300px;
+		border-radius: 20px;
+	}
+
+	.Venusparagraph {
+		color: white;
+		background-color: #b8860b;
+		padding: 30px;
+		width: 600px;
+		border-radius: 20px;
+	}
+
+	.VenusBackground {
+		background-image: url('Images/Venusbackground.jpeg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		width: 100%;
+		height: 800px;
+		margin: 0;
+		padding: 20px;
+		box-sizing: border-box;
+	}
+
+	.Venusbutton {
+		background-color: #b8860b;
+		color: white;
+		font-size: 15px;
+		padding: 12px;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+
+</style>
+
+<head>
+	<meta charset="utf-8">
+</head>
+
+<body class="VenusBackground">
+
+	<h1 class="VenusHeader">Welcome to Venus</h1>
+
+	<p class="Venusparagraph">
+
+		BASIC FUN FACTS
+
+		Venus is the second planet from the Sun.
+		It is about 4.5 billion years old.
+		Venus is similar in size to Earth.
+		A year on Venus lasts about 225 Earth days.
+		A day on Venus lasts about 243 Earth days.
+		Venus is the hottest planet in our Solar System.
+		Temperatures on Venus can reach about 900 degrees Fahrenheit.
+		Venus has a very thick atmosphere.
+		Venus is covered by thick clouds made mostly of sulfuric acid.
+		Venus rotates in the opposite direction of most planets.
+
+	</p>
+
+
+	<h2 class="VenusHeader">What would you weigh on Venus?</h2>
+
+	<p class="Venusparagraph">
+		Enter your Earth weight below to find out!
+	</p>
+
+	<input type="number" id="earthWeight" placeholder="Enter your weight">
+
+	<button class="Venusbutton" onclick="calculateWeight()">
+		Calculate
+	</button>
+
+	<p id="weightResult" class="VenusHeader">
+		Your Venus weight will appear here!
+	</p>
+
+
+	<p id="joke" class="VenusHeader">
+		Click the button to get a joke!
+	</p>
+
+	<button class="Venusbutton" onclick="randomJoke()">
+		Tell me a joke
+	</button>
+
+
+	<script>
+
+		function calculateWeight() {
+
+			let earthWeight = document.getElementById("earthWeight").value;
+
+			let venusWeight = earthWeight * 0.90;
+
+			document.getElementById("weightResult").textContent =
+				"You would weigh about " + venusWeight.toFixed(1) + " lbs on Venus!";
+		}
+
+
+		let jokes = [
+
+			"Why is Venus so hot? It has a serious heat problem! ",
+
+			"Why did Venus bring an umbrella? Because of all the clouds! ☁",
+
+			"What did Venus say to Earth? We're almost the same size! ",
+
+			"Why doesn't Venus need a heater? It's already the hottest planet! ",
+
+			"Why did Venus get kicked out of school? It was causing too much heat! ",
+
+			"What is Venus's favorite type of music? Heavy metal! ",
+
+			"Why did Venus wear sunglasses? Because it was too bright! ",
+
+			"Why is Venus always so warm? It knows how to keep things heated! "
+
+		];
+
+
+		function randomJoke() {
+
+			let randomNumber = Math.floor(Math.random() * jokes.length);
+
+			document.getElementById("joke").textContent = jokes[randomNumber];
+
+		}
+
+	</script>
+
+</body>
+</html>
+

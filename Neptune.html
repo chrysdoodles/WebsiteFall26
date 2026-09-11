@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+
+<style>
+
+	.NeptuneHeader {
+		color: white;
+		background-color: #4169E1;
+		padding: 30px;
+		width: 300px;
+		border-radius: 20px;
+	}
+
+	.Neptuneparagraph {
+		color: white;
+		background-color: #4169E1;
+		padding: 30px;
+		width: 600px;
+		border-radius: 20px;
+	}
+
+	.NeptuneBackground {
+		background-image: url('Images/Neptunebackground.jpeg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		width: 100%;
+		height: 800px;
+		margin: 0;
+		padding: 20px;
+		box-sizing: border-box;
+	}
+
+	.Neptunebutton {
+		background-color: #4169E1;
+		color: white;
+		font-size: 15px;
+		padding: 12px;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+
+</style>
+
+<head>
+	<meta charset="utf-8">
+</head>
+
+<body class="NeptuneBackground">
+
+	<h1 class="NeptuneHeader">Welcome to Neptune</h1>
+
+	<p class="Neptuneparagraph">
+
+		BASIC FUN FACTS
+
+		Neptune is the eighth and farthest planet from the Sun.
+		It is the fourth-largest planet in our Solar System.
+		Neptune is about 4.5 billion years old.
+		Neptune is an ice giant.
+		A year on Neptune lasts about 165 Earth years.
+		A day on Neptune lasts about 16 hours.
+		Neptune has extremely strong winds.
+		Neptune has a deep blue color.
+		Neptune has rings.
+		Neptune has many moons, including Triton.
+
+	</p>
+
+
+	<h2 class="NeptuneHeader">What would you weigh on Neptune?</h2>
+
+	<p class="Neptuneparagraph">
+		Enter your Earth weight below to find out!
+	</p>
+
+	<input type="number" id="earthWeight" placeholder="Enter your weight">
+
+	<button class="Neptunebutton" onclick="calculateWeight()">
+		Calculate
+	</button>
+
+	<p id="weightResult" class="NeptuneHeader">
+		Your Neptune weight will appear here!
+	</p>
+
+
+	<p id="joke" class="NeptuneHeader">
+		Click the button to get a joke!
+	</p>
+
+	<button class="Neptunebutton" onclick="randomJoke()">
+		Tell me a joke
+	</button>
+
+
+	<script>
+
+		function calculateWeight() {
+
+			let earthWeight = document.getElementById("earthWeight").value;
+
+			let neptuneWeight = earthWeight * 1.14;
+
+			document.getElementById("weightResult").textContent =
+				"You would weigh about " + neptuneWeight.toFixed(1) + " lbs on Neptune!";
+		}
+
+
+		let jokes = [
+
+			"Why is Neptune so blue? Because it is feeling blue! ",
+
+			"Why did Neptune bring a jacket? Because it is really cold! ",
+
+			"Why is Neptune so windy? It has some serious air! ",
+
+			"Why did Neptune go to school? To become the smartest planet! ",
+
+			"What is Neptune's favorite color? Blue! ",
+
+			"Why did Neptune get a telescope? It wanted to look at the stars! ",
+
+			"Why does Neptune like swimming? Because it is the bluest planet around! ",
+
+			"Why is Neptune so far away? It likes having some personal space! "
+
+		];
+
+
+		function randomJoke() {
+
+			let randomNumber = Math.floor(Math.random() * jokes.length);
+
+			document.getElementById("joke").textContent = jokes[randomNumber];
+
+		}
+
+	</script>
+
+</body>
+</html>

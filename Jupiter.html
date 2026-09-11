@@ -1,0 +1,145 @@
+
+<!doctype html>
+<html>
+
+<style>
+
+	.JupiterHeader {
+		color: white;
+		background-color: #9b7653;
+		padding: 30px;
+		width: 300px;
+		border-radius: 20px;
+	}
+
+	.Jupiterparagraph {
+		color: white;
+		background-color: #9b7653;
+		padding: 30px;
+		width: 600px;
+		border-radius: 20px;
+	}
+
+	.JupiterBackground {
+		background-image: url('Images/Jupiterbackground.jpg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		width: 100%;
+		height: 800px;
+		margin: 0;
+		padding: 20px;
+		box-sizing: border-box;
+	}
+
+	.Jupiterbutton {
+		background-color: #9b7653;
+		color: white;
+		font-size: 15px;
+		padding: 12px;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+
+</style>
+
+<head>
+	<meta charset="utf-8">
+</head>
+
+<body class="JupiterBackground">
+
+	<h1 class="JupiterHeader">Welcome to Jupiter</h1>
+
+	<p class="Jupiterparagraph">
+
+		BASIC FUN FACTS
+
+		Jupiter is the fifth planet from the Sun.
+		It is the largest planet in our Solar System.
+		Jupiter is about 4.6 billion years old.
+		Jupiter is a gas giant.
+		A year on Jupiter lasts about 12 Earth years.
+		A day on Jupiter lasts only about 10 hours.
+		Jupiter has a very strong magnetic field.
+		Jupiter has many moons, including the four large Galilean moons.
+		Jupiter's Great Red Spot is a giant storm.
+		Jupiter is mostly made of hydrogen and helium.
+
+	</p>
+
+
+	<h2 class="JupiterHeader">What would you weigh on Jupiter?</h2>
+
+	<p class="Jupiterparagraph">
+		Enter your Earth weight below to find out!
+	</p>
+
+	<input type="number" id="earthWeight" placeholder="Enter your weight">
+
+	<button class="Jupiterbutton" onclick="calculateWeight()">
+		Calculate
+	</button>
+
+	<p id="weightResult" class="JupiterHeader">
+		Your Jupiter weight will appear here!
+	</p>
+
+
+	<p id="joke" class="JupiterHeader">
+		Click the button to get a joke!
+	</p>
+
+	<button class="Jupiterbutton" onclick="randomJoke()">
+		Tell me a joke
+	</button>
+
+
+	<script>
+
+		function calculateWeight() {
+
+			let earthWeight = document.getElementById("earthWeight").value;
+
+			let jupiterWeight = earthWeight * 2.53;
+
+			document.getElementById("weightResult").textContent =
+				"You would weigh about " + jupiterWeight.toFixed(1) + " lbs on Jupiter!";
+		}
+
+
+		let jokes = [
+
+			"Why is Jupiter so big? It really knows how to make an entrance! ",
+
+			"Why did Jupiter get detention? It had too many moons! ",
+
+			"What does Jupiter say when it is angry? I'm having a great red spot day! ",
+
+			"Why did Jupiter go to the gym? It wanted to stay the biggest planet! ",
+
+			"Why is Jupiter such a good leader? It has a lot of gravity! ",
+
+			"What is Jupiter's favorite type of music? Heavy metal! ",
+
+			"Why did Jupiter bring an umbrella? Because it has some serious storms! ☁",
+
+			"Why doesn't Jupiter need a watch? Its days go by really fast! "
+
+		];
+
+
+		function randomJoke() {
+
+			let randomNumber = Math.floor(Math.random() * jokes.length);
+
+			document.getElementById("joke").textContent = jokes[randomNumber];
+
+		}
+
+	</script>
+
+</body>
+</html>
+

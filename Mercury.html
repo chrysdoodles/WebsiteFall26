@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+
+<style>
+
+	.MercuryHeader {
+		color: white;
+		background-color: #6b6b6b;
+		padding: 30px;
+		width: 300px;
+		border-radius: 20px;
+	}
+
+	.Mercuryparagraph {
+		color: white;
+		background-color: #6b6b6b;
+		padding: 30px;
+		width: 600px;
+		border-radius: 20px;
+	}
+
+	.MercuryBackground {
+		background-image: url('Images/Mercurybackground.jpeg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		width: 100%;
+		height: 800px;
+		margin: 0;
+		padding: 20px;
+		box-sizing: border-box;
+	}
+
+	.Mercurybutton {
+		background-color: #6b6b6b;
+		color: white;
+		font-size: 15px;
+		padding: 12px;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+
+</style>
+
+<head>
+	<meta charset="utf-8">
+</head>
+
+<body class="MercuryBackground">
+
+	<h1 class="MercuryHeader">Welcome to Mercury</h1>
+
+	<p class="Mercuryparagraph">
+
+		BASIC FUN FACTS
+
+		Mercury is the closest planet to the Sun.
+		It is the smallest planet in our Solar System.
+		Mercury is about 4.5 billion years old.
+		Mercury is about 36 million miles (58 million km) away from the Sun.
+		A year on Mercury lasts only 88 Earth days.
+		A day on Mercury lasts about 59 Earth days.
+		Mercury has a very thin atmosphere.
+		Temperatures on Mercury can change dramatically.
+		Mercury has a rocky surface covered with craters.
+
+	</p>
+
+	<h2 class="MercuryHeader">What would you weigh on Mercury?</h2>
+
+	<p class="Mercuryparagraph">
+		Enter your Earth weight below to find out!
+	</p>
+
+	<input type="number" id="earthWeight" placeholder="Enter your weight">
+
+	<button class="Mercurybutton" onclick="calculateWeight()">
+		Calculate
+	</button>
+
+	<p id="weightResult" class="MercuryHeader">
+		Your Mercury weight will appear here!
+	</p>
+
+	<p id="joke" class="MercuryHeader">
+		Click the button to get a joke!
+	</p>
+
+	<button class="Mercurybutton" onclick="randomJoke()">
+		Tell me a joke
+	</button>
+
+
+	<script>
+
+		function calculateWeight() {
+
+			let earthWeight = document.getElementById("earthWeight").value;
+
+			let mercuryWeight = earthWeight * 0.38;
+
+			document.getElementById("weightResult").textContent =
+				"You would weigh about " + mercuryWeight.toFixed(1) + " lbs on Mercury!";
+		}
+
+
+		let jokes = [
+
+			"Why did Mercury get a job? It wanted to make some money! ",
+
+			"Why is Mercury always in a hurry? Because it has places to go! ",
+
+			"What did Mercury say to the Sun? You're making me hot! ☀",
+
+			"Why did Mercury bring sunglasses? Because it's so close to the Sun! ",
+
+			"Why doesn't Mercury ever get bored? It is always going around the Sun! ",
+
+			"Why did Mercury get a speeding ticket? It was orbiting too fast! ",
+
+			"What is Mercury's favorite type of music? Rock! ",
+
+			"Why is Mercury so small? It wanted to save space! "
+
+		];
+
+
+		function randomJoke() {
+
+			let randomNumber = Math.floor(Math.random() * jokes.length);
+
+			document.getElementById("joke").textContent = jokes[randomNumber];
+
+		}
+
+	</script>
+
+</body>
+</html>
+
