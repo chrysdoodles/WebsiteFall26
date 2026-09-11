@@ -1,10 +1,112 @@
+
 <!doctype html>
 <html>
-	<head>
-			<meta charset="utf-8">
-			<tilte> Hiragana! </title>
-	<head>
-	<body>
-		<p> Hiragana is the main language in the Japanaese language. This holds up to 48 letters.</p>
-		
-	<body>
+
+<style>
+
+	.MoonHeader {
+		color: white;
+		background-color: #343434;
+		padding: 30px;
+		width: 300px;
+		border-radius: 20px;
+	}
+
+	.Moonparagraph {
+		color: white;
+		background-color: #343434;
+		padding: 30px;
+		width: 600px;
+		border-radius: 20px;
+	}
+
+	.MoonBackground {
+		background-image: url('Images/Moonbackground.jpg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		width: 100%;
+		height: 800px;
+		margin: 0;
+		padding: 20px;
+		box-sizing: border-box;
+	}
+
+</style>
+
+<head>
+
+	<meta charset="utf-8">
+
+</head>
+
+<body class="MoonBackground">
+
+	<h1 class="MoonHeader">Welcome to the Moon</h1>
+
+	<p class="Moonparagraph">
+
+		BASIC FUN FACTS
+
+		The Moon is Earth's only natural satellite.
+		It is about 4.5 billion years old.
+		The Moon is about 238,900 miles (384,400 km) away from Earth.
+		The Moon is much smaller than Earth.
+		The Moon's gravity is about 1/6 of Earth's gravity.
+		The Moon has a diameter of about 2,159 miles (3,474 km).
+		The Moon does not produce its own light.
+		The Moon reflects light from the Sun.
+		It takes about 27.3 days for the Moon to orbit Earth.
+
+	</p>
+
+	<p id="joke" class="MoonHeader">
+
+		Click the button to get a joke!
+
+	</p>
+
+	<button class="Moonbutton" onclick="randomJoke()">
+
+		Tell me a joke
+
+	</button>
+
+
+	<script>
+
+		let jokes = [
+
+			"Why did the Moon skip dinner? It was already full! ",
+
+			"Why did the Moon go to school? It wanted to become a little brighter! ",
+
+			"What did the Moon say to the Sun? Stop following me around! ",
+
+			"Why is the Moon so calm? Because it knows how to stay in orbit! ",
+
+			"Why did the Moon break up with Earth? It needed some space! ",
+
+			"What is the Moon's favorite type of music? Eclipse! ",
+
+			"Why doesn't the Moon ever get lost? It always knows its phase! ",
+
+			"Why was the Moon so tired? It stayed up all night! "
+
+		];
+
+
+		function randomJoke() {
+
+			let randomNumber = Math.floor(Math.random() * jokes.length);
+
+			document.getElementById("joke").textContent = jokes[randomNumber];
+
+		}
+
+	</script>
+
+</body>
+
+</html>
+

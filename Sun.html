@@ -1,15 +1,79 @@
 <!doctype html>
 <html>
+	<style>
+	.SunHeader {
+		color: white;
+		background-color: #dbb302;
+		padding: 30px;
+		width: 300px;
+		border-radius: 20px;
+	}
+	.Sunparagraph {
+		color: white;
+		background-color: #dbb302;
+		padding: 30px;
+		width: 600px;
+		border-radius: 20px;
+
+	}
+	.SunBackground {
+  
+			background-image: url('Images/Sunbackground.jpg');
+			background-repeat: no-repeat;/* so i dont have repeating images ontop of each other*/
+			background-position: center;
+			background-size: cover;
+			 width: 100%;
+  			height: 800px; 
+  			margin: 0; /* Clears default browser outer margins */
+			padding: 20px; /* Gives your text a clean spacing cushion from the edges */
+			box-sizing: border-box;
+	}
+	
+	</style>
 	<head>
 			<meta charset="utf-8">
-			<tilte> my home page </title>
-	</head>
-	<body>
-		<h1> Welcome to practical Web Dev</h1>
 
-		<p> here is a paragraph</p>
-		<button on click= "alert('boom!');">
-			DO NOT PRESS
+	</head>
+	<body class = "SunBackground">
+
+		<h1 class ="SunHeader"> Welcome to the Sun</h1>
+
+
+
+		<p class ="Sunparagraph"> 	
+			BASIC FUN FACTS
+
+		The Sun is a star at the center of our Solar System.
+		It is about 4.6 billion years old.
+		The Sun is about 93 million miles (150 million km) away from Earth.
+		It contains about 99.8% of the total mass of the Solar System.
+		The Sun is mostly made of hydrogen and helium.
+		Its diameter is about 864,000 miles (1.39 million km).
+		You could fit about 1.3 million Earths inside the Sun by volume.
+		Light from the Sun takes about 8 minutes and 20 seconds to reach Earth.
+		</p>
+		<p id="joke" class="SunHeader">
+		Click the button to get a joke!
+		</p>
+
+		<button class="Sunbutton" onclick="randomJoke()">
+		Tell me a joke
 		</button>
+	<script> let jokes = [ 
+		"Why did the sun go to school? Because it wanted to get brighter! ", 
+		"Why is the sun so popular? Because it's the center of attention! ",
+		"What did the sun say to the clouds? You're blocking my shine! ",
+		"Why did the sun get a job? It wanted to make some rays! ", 
+		"Why doesn't the sun ever get cold? Because it has a lot of degrees! ", 
+		"What do you call the sun when it's tired? Ex-hausted! ", 
+		"Why did the sun get detention? It was caught shining in class! ", 
+		"What did Earth say to the sun? Stop staring at me, you're making me hot! " 
+	]; 
+
+	function randomJoke() { 
+			let randomNumber = Math.floor(Math.random() * jokes.length); document.getElementById("joke").textContent = jokes[randomNumber]; 
+		} 
+	</script>
+
 	</body>
-	</hyml>
+	</html>
