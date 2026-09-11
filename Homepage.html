@@ -1,16 +1,267 @@
 <!doctype html>
 <html>
+
+<style>
+	.Header {
+		color: white;
+		background-color: #7b32a8;
+		padding: 30px;
+		width: 500px;
+		border-radius: 20px;
+	}
+	.WebBackground {
+  
+			background-image: url('Images/HomeBackgroundimage.jpg');
+			background-repeat: no-repeat;/* so i dont have repeating images ontop of each other*/
+			background-position: center;
+			background-size: cover;
+			 width: 100%;
+  			height: 800px; 
+  			margin: 0; /* Clears default browser outer margins */
+			padding: 20px; /* Gives your text a clean spacing cushion from the edges */
+			box-sizing: border-box;
+	}
+	.Marsbutton{
+			background-color: transparent;
+			border: none;
+			padding: 0;
+			cursor: pointer;
+
+			transition: transform 0.2s ease;
+
+
+	}
+	.Marsbutton img {
+			width: 40px;           
+	  		height: auto;         
+	  		display: block;
+	  		border: transparent;  
+  	  		border-radius: 50%; 
+  	  		padding: 4px; 
+	}
+	.Jupiterbutton{
+			background-color: transparent;
+			border: none;
+			padding: 0;
+			cursor: pointer;
+
+			transition: transform 0.2s ease;
+
+
+	}
+	.Jupiterbutton img {
+			width: 80px;           
+	  		height: auto;         
+	  		display: block;
+	  		border: transparent;  
+  	  		border-radius: 50%; 
+  	  		padding: 4px; 
+	}
+
+
+	.Mercurybutton{
+			background-color: transparent;
+			border: none;
+			padding: 0;
+			cursor: pointer;
+
+			transition: transform 0.2s ease;
+
+
+	}
+	.Mercurybutton img {
+			width: 20px;           
+	  		height: auto;         
+	  		display: block;
+	  		border: transparent;  
+  	  		border-radius: 50%; 
+  	  		padding: 4px; 
+	}
+
+	.Saturnbutton{
+			
+			  background-color: transparent; 
+			  border: 0; 
+			  padding: 0; 
+			  cursor: pointer;  
+			  transition: transform 0.2s ease;  
+
+	}
+	.Saturnbutton img{
+			  width: 150px;        
+			  height: auto;        
+			  display: block; 
+			  border: transparent;        
+			  border-radius: 0;   
+			  object-fit: contain; 
+
+
+	}
+	.Sunbutton {
+
+			background-color: transparent;
+			border: none;
+			padding: 0;
+			cursor: pointer;
+
+			transition: transform 0.2s ease;
+	}
+	.Sunbutton img{
+			width: 500px;           
+	  		height: auto;         
+	  		display: block;
+	  		border: transparent;  
+  	  		border-radius: 50%; 
+  	  		padding: 4px; 
+
+	}
+	.Neptunebutton{
+		background-color: transparent;
+		border: none;
+		padding: 0;
+		cursor: pointer;
+
+		transition: transform 0.2s ease;
+
+	}
+	.Neptunebutton img {
+		width: 80px;           
+	  	height: auto;         
+	  	display: block;
+	  	border: transparent;  
+  	  	border-radius: 50%; 
+  	  	padding: 4px; 
+
+	}
+
+	.Uranusbutton{
+		background-color: transparent;
+		border: none;
+		padding: 0;
+		cursor: pointer;
+
+		transition: transform 0.2s ease;
+
+	}
+	.Uranusbutton img {
+		width: 100px;           
+	  	height: auto;         
+	  	display: block;
+	  	border: transparent;  
+  	  	border-radius: 50%; 
+  	  	padding: 4px; 
+
+	}
+	.Earthbutton{
+		background-color: transparent;
+		border: none;
+		padding: 0;
+		cursor: pointer;
+
+		transition: transform 0.2s ease;
+
+	}
+	.Earthbutton img {
+		width: 50px;           
+	  	height: auto;         
+	  	display: block;
+	  	border: transparent;  
+  	  	border-radius: 50%; 
+  	  	padding: 4px; 
+
+	}
+	.Venusbutton {
+		background-color: transparent;
+		border: none;
+		padding: 0;
+		cursor: pointer;
+
+		transition: transform 0.2s ease;
+
+	}
+	.Venusbutton img{
+		width: 50px;           
+	  	height: auto;         
+	  	display: block;
+	  	border: transparent;  
+  	  	border-radius: 50%; 
+  	  	padding: 4px; 
+
+	}
+	.Moonbutton{
+		background-color: transparent;
+		border: none;
+		padding: 0;
+		cursor: pointer;
+
+		transition: transform 0.2s ease;
+
+	}
+	.Moonbutton img {
+		width: 30px;           
+	  	height: auto;         
+	  	display: block;
+	  	border: transparent;  
+  	  	border-radius: 50%; 
+  	  	padding: 4px; 
+		
+	}
+
+
+
+	</style> 
 	<head>
 			<meta charset="utf-8">
-			<tilte> Japanese studies! </title>
 	</head>
-	<body>
-		<p> I have been Studying Japanese for 4 years. and I have 
-		always wanted to develop a website to teach the bare basics 
-		in a friendly manner for all!</p>
-		
-	<a href="HiraganaPage.html"> Hiragana alphabet</a>
-	<a href="KatakanaPage.html"> Katakana alphabet</a>
+<body class = "WebBackground">
+		<h1 class = "Header"> Welcome to the Solar system </h1>
+		<p class = "Header"> Come all to learn about planets with some fun planet jokes!</p>
+
+	<button class="Sunbutton" onclick="window.location.href='Sun.html'">
+  	<img src="Images/SunIcon.jpg" alt="The Sun">
+	</button>
+
+	<button class="Mercurybutton" onclick="window.location.href='Mercury.html'">
+  	<img src="Images/MercuryIcon.jpg" alt="Mercury Planet">
+	</button>
+
+	<button class="Venusbutton" onclick="window.location.href='Venus.html'">
+  	<img src="Images/VenusIcon.jpg" alt="Venus Planet">
+	</button>
+
+	<button class="Moonbutton" onclick="window.location.href='Moon.html'">
+  	<img src="Images/MoonIcon.jpg" alt="Moon Planet">
+	</button>
+
+	<button class="Earthbutton" onclick="window.location.href='Earth.html'">
+  	<img src="Images/EarthIcon.jpg" alt="Earth Planet">
+	</button>
+
+	<button class="Marsbutton" onclick="window.location.href='Mars.html'">
+  	<img src="Images/MarsIcon.jpg" alt="Mars Planet">
+	</button>
+
+	<button class="Jupiterbutton" onclick="window.location.href='Jupiter.html'">
+  	<img src="Images/jupiterIcon.jpg" alt="Jupiter Planet">
+	</button>
+
+	<button class="Saturnbutton" onclick="window.location.href='Saturn.html'">
+  	<img src="Images/SaturnIcon.png  " alt="Saturn Planet">
+	</button> 
+
+	<button class="Uranusbutton" onclick="window.location.href='Uranus.html'">
+  	<img src="Images/UranusIcon.jpg" alt="Uranus Planet">
+	</button>
+
+	<button class="Neptunebutton" onclick="window.location.href='Neptune.html'">
+  	<img src="Images/NeptuneIcon.jpg" alt="Neptune Planet">
+	</button>
+
+
+
+
+
+
 
 	</body>
-	</hyml>
+	</html>
